@@ -42,7 +42,7 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
   Create a function `getShiftByAgentId` which will return all the shifts worked by the given Agent. The function take `agentId` as parameter.
 
 - **Acceptance Criteria**
-  Given the `agentId` this function should return all the shift that the agent has worked on.
+  Given the `agentId` this function should return all the shifts that the agent has worked on.
 
 - **Implementation**:
 
