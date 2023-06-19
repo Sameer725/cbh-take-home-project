@@ -38,23 +38,6 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
   1. Implementation: 3hrs
   2. Testing: 1hr
 
-  ### Task 2: API to retrieve the shift using the Agent id.
-
-- **Description**:
-  Create a function `getShiftByAgentId` which will return all the Shifts worked by the given Agent. The function take `agentId` as parameter.
-
-- **Acceptance Criteria**
-  Given the `agentId` this function should return all the Shifts that the agent has worked on.
-
-- **Implementation**:
-
-1.  Add a method `getShiftByAgentId`, to retrive all Shifts information from Shifts table.
-
-- **Estimation**: 6hrs
-
-1.  Implementation: 4hrs
-2.  Testing: 2hrs
-
 ### Task 2: API to retrieve the shift using the Agent id.
 
 - **Description**:
