@@ -28,6 +28,13 @@ describe("deterministicPartitionKey", () => {
     expect(trivialKey).toBe(partitionKey);
   });
 
+  it("should return stringify value if partitionKey/candidateKey is not string", () => {
+    const partitionKey = { test: "test key" };
+    const trivialKey = deterministicPartitionKey({ partitionKey });
+
+    expect(trivialKey).toBe(JSON.stringify(partitionKey));
+  });
+
   it("should return hased value if partitionKey/candidateKey length exceeds MAX_PARTITION_KEY_LENGTH", () => {
     const partitionKey = Array(MAX_PARTITION_KEY_LENGTH)
       .fill(null)
