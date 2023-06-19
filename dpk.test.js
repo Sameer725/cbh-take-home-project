@@ -2,6 +2,7 @@ const {
   deterministicPartitionKey,
   createHash,
   TRIVIAL_PARTITION_KEY,
+  MAX_PARTITION_KEY_LENGTH,
 } = require("./dpk.js");
 
 describe("deterministicPartitionKey", () => {
@@ -25,5 +26,18 @@ describe("deterministicPartitionKey", () => {
     const trivialKey = deterministicPartitionKey({ partitionKey });
 
     expect(trivialKey).toBe(partitionKey);
+  });
+
+  it("should return hased value if partitionKey/candidateKey length exceeds MAX_PARTITION_KEY_LENGTH", () => {
+    const partitionKey = Array(MAX_PARTITION_KEY_LENGTH)
+      .fill(null)
+      .map((_, index) => index)
+      .join("");
+
+    const expected = createHash(partitionKey);
+
+    const trivialKey = deterministicPartitionKey({ partitionKey });
+
+    expect(trivialKey).toBe(expected);
   });
 });

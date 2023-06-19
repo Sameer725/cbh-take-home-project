@@ -23,18 +23,37 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 - **Description**:
   A new customId column should be added to agent table.
 
-- **Acceptance Criteris**
+- **Acceptance Criteria**
 
   - Agents table should have a new nullable field of named customId.
 
 - **Implementation**
 
   1.  Add a new nullable `customId` column in Agents table.
-  2.  Add a way for Facilities to assign a customId to each agent they work with.
+  2.  Establish a one to many relationship between Facilities and Agents.
+  3.  Add a way for Facilities to assign a customId to each agent they work with.
 
 - **Estimation**: 4hrs
+
   1. Implementation: 3hrs
   2. Testing: 1hr
+
+  ### Task 2: API to retrieve the shift using the Agent id.
+
+- **Description**:
+  Create a function `getShiftByAgentId` which will return all the Shifts worked by the given Agent. The function take `agentId` as parameter.
+
+- **Acceptance Criteria**
+  Given the `agentId` this function should return all the Shifts that the agent has worked on.
+
+- **Implementation**:
+
+1.  Add a method `getShiftByAgentId`, to retrive all Shifts information from Shifts table.
+
+- **Estimation**: 6hrs
+
+1.  Implementation: 4hrs
+2.  Testing: 2hrs
 
 ### Task 2: API to retrieve the shift using the Agent id.
 
