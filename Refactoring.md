@@ -12,8 +12,11 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ### Change Log
 
-1. Define constants outside of the function such that if needed updation to them is easier and also export them from `dpk.js`, so that they can be used in other places (in test).
-2. Add a helper function `createHash` to hash the provided value (hashing is done is multiple places) this avoids code duplication/repetation.
-3. Return early with default value if no argument provided, this is the trivial(default) case and we don't need to proceed further if there is nothing to work on.
-4. Use logical OR operator instead of if-else to set initial value of candidate key, it is more consice and readable.
-5. Add test cases to check the function is working as expected.
+1. To have a modular approach, every items has their on module.
+
+- constansts are defined in `const.js` which contains all the hardcoded value.
+- utility functions are defined in `utils.js`. In this case the `createHash` function.
+
+2. Following the `Single Reponsibity Principle` make `deterministicPartitionKey` the only(default) export from `dpk.js` .
+3. Have a seperate `__tests__` directory for test cases, `jest` recoginzes the `__tests__` directory by default.
+4. use latest `EScript` module system instead of `commonjs`.

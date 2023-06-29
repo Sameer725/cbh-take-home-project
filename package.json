@@ -1,13 +1,14 @@
 {
   "name": "cbh-take-home-project",
   "version": "1.0.0",
-  "description": "",
-  "main": " ",
+  "description": "A home assement for clipboard health",
+  "main": "./src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "start": "node index.js"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "start": "node ./src/index.js"
   },
-  "author": "",
+  "author": "Sameer Khanal",
   "license": "ISC",
   "devDependencies": {
     "jest": "^28.1.0"
